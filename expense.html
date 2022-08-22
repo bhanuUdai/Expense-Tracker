@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Expense Tracker</title>
+        <style>
+           
+            header {
+                text-align: center;
+                color: brown;
+                background-color: bisque;
+            }
+            form{
+                
+                width: 600px;
+                height: 175px;
+                margin:auto;
+                
+            }
+            #amount
+            {
+                width: 600px;
+                height :20px;
+                border:1px solid pink ;
+                color: brown;
+                }
+           
+            #description{
+                width: 600px;
+                height :20px;
+                border:1px solid pink ;
+                color: brown;
+            }
+            #category{
+                width: 600px;
+                height :20px;
+                border:1px solid pink;
+                color: brown;
+            }
+            ul{
+                text-align: center;
+                color: brown;
+            }
+            button{
+                border:1px solid pink ;
+                background-color: rgb(240, 223, 191);
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Your Expense</h1>
+        </header>
+        <form id="my_form" onsubmit="saveToLocalStorage(event)">
+            <label for="amount">Choose Expense Amount</label>
+            <br>
+            <input type="number" id="amount" name="expense_amount" required min="0" >
+            <br>
+            <label for="description">Choose Description</label>
+            <br>
+            <input type="text" id="description" name="description_">
+            <br>
+            <label for="category">Choose Category</label>
+            <br>
+            <input type="text" id="category" name="category_">
+            <br>
+            <br>
+            <button id="hitme">Submit</button>
+        </form>
+        <ul id="details"></ul>
+        <script src="expense.js"></script>
+    </body>
+    
+</html>
